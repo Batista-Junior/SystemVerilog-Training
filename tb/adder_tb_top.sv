@@ -2,7 +2,7 @@
 // Top-level testbench for adder
 //------------------------------------------------------------------------------
 // This module instantiates the DUT, generates clock/reset, and starts UVM phases.
-//
+//   
 // Author: Nelson Alves nelsonafn@gmail.com
 // Date  : October 2023
 //------------------------------------------------------------------------------

@@ -1,0 +1,7 @@
+0.7
+2020.2
+May 21 2025
+22:59:56
+/home/junior/lista_systemverilog/verif-env-template/rtl/counter.sv,1762520409,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/counter_tb.sv,,counter,,uvm,,,,,,
+/home/junior/lista_systemverilog/verif-env-template/tb/counter_tb.sv,1762520468,systemVerilog,,,,counter_tb,,uvm,,,,,,
+/tools/Xilinx/2025.1/data/system_verilog/uvm_1.2/uvm_macros.svh,1741208555,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/rtl/counter.sv,,,,uvm,,,,,,
