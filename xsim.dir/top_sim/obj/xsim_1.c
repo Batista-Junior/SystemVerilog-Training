@@ -63,13 +63,12 @@ IKI_DLLESPEC extern void execute_9(char*, char *);
 IKI_DLLESPEC extern void execute_10(char*, char *);
 IKI_DLLESPEC extern void execute_11(char*, char *);
 IKI_DLLESPEC extern void execute_3(char*, char *);
-IKI_DLLESPEC extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[10] = {(funcp)execute_4, (funcp)execute_5, (funcp)execute_6, (funcp)execute_7, (funcp)execute_8, (funcp)execute_9, (funcp)execute_10, (funcp)execute_11, (funcp)execute_3, (funcp)vlog_transfunc_eventcallback};
-const int NumRelocateId= 10;
+funcp funcTab[9] = {(funcp)execute_4, (funcp)execute_5, (funcp)execute_6, (funcp)execute_7, (funcp)execute_8, (funcp)execute_9, (funcp)execute_10, (funcp)execute_11, (funcp)execute_3};
+const int NumRelocateId= 9;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/top_sim/xsim.reloc",  (void **)funcTab, 10);
+	iki_relocate(dp, "xsim.dir/top_sim/xsim.reloc",  (void **)funcTab, 9);
 
 	/*Populate the transaction function pointer field in the whole net structure */
 }

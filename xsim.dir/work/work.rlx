@@ -3,5 +3,7 @@
 May 21 2025
 22:59:56
 /home/junior/lista_systemverilog/verif-env-template/rtl/counter.sv,1762520409,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/counter_tb.sv,,counter,,uvm,,,,,,
+/home/junior/lista_systemverilog/verif-env-template/rtl/register.sv,1763646635,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/register_tb.sv,,register,,uvm,,,,,,
 /home/junior/lista_systemverilog/verif-env-template/tb/counter_tb.sv,1762520468,systemVerilog,,,,counter_tb,,uvm,,,,,,
-/tools/Xilinx/2025.1/data/system_verilog/uvm_1.2/uvm_macros.svh,1741208555,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/rtl/counter.sv,,,,uvm,,,,,,
+/home/junior/lista_systemverilog/verif-env-template/tb/register_tb.sv,1763645873,systemVerilog,,,,register_tb,,uvm,,,,,,
+/tools/Xilinx/2025.1/data/system_verilog/uvm_1.2/uvm_macros.svh,1741208555,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/rtl/register.sv,,,,uvm,,,,,,
