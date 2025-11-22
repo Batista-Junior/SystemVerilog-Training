@@ -1,3 +1,5 @@
+// Resolução Lab 2 Modeling a Simple Multiplexor
+
 `timescale 1ns/1ps
 
 module scale_mux #(
@@ -6,8 +8,8 @@ module scale_mux #(
 (
   input  logic [WIDTH-1:0] in_a,
   input  logic [WIDTH-1:0] in_b,
-  input  logic sel_a
-  output logic out 
+  input  logic             sel_a,
+  output logic [WIDTH-1:0] out 
 );
   always_comb begin
     //out = sel_a?in_b:in_a;  

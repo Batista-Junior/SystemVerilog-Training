@@ -1,5 +1,7 @@
 // Lab 1 Modeling a Simple Register
 
+`timescale 1ns/1ps
+
 module register #(
   parameter WIDTH = 8
 ) (
