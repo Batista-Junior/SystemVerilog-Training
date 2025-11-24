@@ -1,0 +1,4 @@
+rtl/memory_interface.sv
+rtl/memory.sv
+tb/mem_test.sv
+tb/top.sv

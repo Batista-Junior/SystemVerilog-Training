@@ -1,0 +1,2 @@
+rtl/memory.sv
+tb/mem_tester.sv

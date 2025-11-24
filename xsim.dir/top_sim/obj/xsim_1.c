@@ -54,24 +54,22 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
-IKI_DLLESPEC extern void execute_6(char*, char *);
-IKI_DLLESPEC extern void execute_7(char*, char *);
+IKI_DLLESPEC extern void execute_2(char*, char *);
+IKI_DLLESPEC extern void execute_3(char*, char *);
+IKI_DLLESPEC extern void execute_21(char*, char *);
+IKI_DLLESPEC extern void execute_8(char*, char *);
 IKI_DLLESPEC extern void execute_10(char*, char *);
 IKI_DLLESPEC extern void execute_11(char*, char *);
-IKI_DLLESPEC extern void execute_12(char*, char *);
-IKI_DLLESPEC extern void execute_13(char*, char *);
-IKI_DLLESPEC extern void execute_14(char*, char *);
-IKI_DLLESPEC extern void execute_4(char*, char *);
-IKI_DLLESPEC extern void execute_5(char*, char *);
-IKI_DLLESPEC extern void transaction_0(char*, char*, unsigned, unsigned, unsigned);
+IKI_DLLESPEC extern void execute_18(char*, char *);
+IKI_DLLESPEC extern void transaction_1(char*, char*, unsigned, unsigned, unsigned);
 IKI_DLLESPEC extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
 IKI_DLLESPEC extern void vlog_transfunc_eventcallback_2state(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[12] = {(funcp)execute_6, (funcp)execute_7, (funcp)execute_10, (funcp)execute_11, (funcp)execute_12, (funcp)execute_13, (funcp)execute_14, (funcp)execute_4, (funcp)execute_5, (funcp)transaction_0, (funcp)vlog_transfunc_eventcallback, (funcp)vlog_transfunc_eventcallback_2state};
-const int NumRelocateId= 12;
+funcp funcTab[10] = {(funcp)execute_2, (funcp)execute_3, (funcp)execute_21, (funcp)execute_8, (funcp)execute_10, (funcp)execute_11, (funcp)execute_18, (funcp)transaction_1, (funcp)vlog_transfunc_eventcallback, (funcp)vlog_transfunc_eventcallback_2state};
+const int NumRelocateId= 10;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/top_sim/xsim.reloc",  (void **)funcTab, 12);
+	iki_relocate(dp, "xsim.dir/top_sim/xsim.reloc",  (void **)funcTab, 10);
 
 	/*Populate the transaction function pointer field in the whole net structure */
 }
@@ -83,6 +81,7 @@ void sensitize(char *dp)
 
 void simulate(char *dp)
 {
+iki_register_root_pointers(2, 3512, 2,0,0,3696, 7,0) ; 
 		iki_schedule_processes_at_time_zero(dp, "xsim.dir/top_sim/xsim.reloc");
 	// Initialize Verilog nets in mixed simulation, for the cases when the value at time 0 should be propagated from the mixed language Vhdl net
 	iki_execute_processes();
@@ -92,6 +91,10 @@ void simulate(char *dp)
 
 }
 #include "iki_bridge.h"
+void subprog_m_53018b95436388dd_f6820566_3() ;
+void subprog_m_53018b95436388dd_f6820566_2() ;
+void subprog_m_53018b95436388dd_f6820566_1() ;
+static char* ng20[] = {(void *)subprog_m_53018b95436388dd_f6820566_3, (void *)subprog_m_53018b95436388dd_f6820566_2, (void *)subprog_m_53018b95436388dd_f6820566_1};
 void relocate(char *);
 
 void sensitize(char *);
@@ -108,6 +111,7 @@ int main(int argc, char **argv)
     iki_set_xsimdir_location_if_remapped(argc, argv)  ;
     iki_set_sv_type_file_path_name("xsim.dir/top_sim/xsim.svtype");
     iki_set_crvs_dump_file_path_name("xsim.dir/top_sim/xsim.crvsdump");
+    iki_svlog_initialize_virtual_tables(1, 2, ng20);
     void* design_handle = iki_create_design("xsim.dir/top_sim/xsim.mem", (void *)relocate, (void *)sensitize, (void *)simulate, (void*)0, 0, isimBridge_getWdbWriter(), 0, argc, argv);
      iki_set_rc_trial_count(100);
     (void) design_handle;
