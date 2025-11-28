@@ -1,1 +1,1 @@
-"top" --timescale "1ns/1ps" -L "uvm" -s "top_sim" --debug "typical" --mt "16" --incr 
+"q_analog_prng_tb" --timescale "1ns/1ps" -L "uvm" -s "top_sim" --debug "typical" --mt "16" --incr 

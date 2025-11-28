@@ -4,6 +4,8 @@ May 21 2025
 22:59:56
 /home/junior/lista_systemverilog/verif-env-template/rtl/memory.sv,1763949441,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/mem_test.sv,,memory,,uvm,,,,,,
 /home/junior/lista_systemverilog/verif-env-template/rtl/memory_interface.sv,1763950999,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/rtl/memory.sv,,mem_interface,,uvm,,,,,,
+/home/junior/lista_systemverilog/verif-env-template/rtl/q_analog_prng.sv,1764291560,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/q_analog_prng_tb.sv,,q_analog_prng,,uvm,,,,,,
 /home/junior/lista_systemverilog/verif-env-template/tb/mem_test.sv,1763979374,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/top.sv,,mem_test,,uvm,,,,,,
+/home/junior/lista_systemverilog/verif-env-template/tb/q_analog_prng_tb.sv,1764293016,systemVerilog,,,,q_analog_prng_tb,,uvm,,,,,,
 /home/junior/lista_systemverilog/verif-env-template/tb/top.sv,1763951207,systemVerilog,,,,top,,uvm,,,,,,
-/tools/Xilinx/2025.1/data/system_verilog/uvm_1.2/uvm_macros.svh,1741208555,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/rtl/memory_interface.sv,,,,uvm,,,,,,
+/tools/Xilinx/2025.1/data/system_verilog/uvm_1.2/uvm_macros.svh,1741208555,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/rtl/q_analog_prng.sv,,,,uvm,,,,,,
