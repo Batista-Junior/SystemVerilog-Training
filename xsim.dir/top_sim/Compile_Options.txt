@@ -1,1 +1,1 @@
-"q_analog_prng_tb" --timescale "1ns/1ps" -L "uvm" -s "top_sim" --debug "typical" --mt "16" --incr 
+"genius_fsm_tb" --timescale "1ns/1ps" -L "uvm" -s "top_sim" --debug "typical" --mt "16" --incr 

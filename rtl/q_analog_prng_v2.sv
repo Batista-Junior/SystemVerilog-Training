@@ -6,12 +6,12 @@ module q_analog_prng #(
   input  logic rst_n,
   input  logic en,
   input  logic [E-1:0] x0,
-  output logic [63:0] prng_out
+  output logic [63:0] prng_out 
 );
 
   // sinais internos
   logic [E-1:0] current_x;
-  logic [E+12:0] multi_res;
+  logic [E+12:0] multi_res; 
 
   // sinais para a redução modular
   logic [E-1:0] upper_bits;
@@ -25,8 +25,9 @@ module q_analog_prng #(
   // estágio 1: (q * x) + 1
   assign multi_res = (current_x * Q_VAL) + 1;
 
-  // estágio 2:
-  assign upper_bits = multi_res[2*E-1:E];
+  // estágio 2: Redução Modular
+  assign upper_bits = E'(multi_res >> E); 
+
   assign lower_bits = multi_res[E-1:0];
 
   assign sum_parts = upper_bits + lower_bits;
@@ -47,15 +48,15 @@ module q_analog_prng #(
       current_x <= next_val_mux;
    end
 
-   logic [3:0] padding_bits;
+   // Lógica de Saída (XOR Padding)
+   logic [2:0] padding_bits;
 
     always_comb begin
-        padding_bits[3] = current_x[0] ^ current_x[1];
-        padding_bits[2] = current_x[2] ^ current_x[3]; 
-        padding_bits[1] = current_x[4] ^ current_x[5]; 
-        padding_bits[0] = current_x[6] ^ current_x[7]; 
+        padding_bits[2] = current_x[4] ^ current_x[5]; 
+        padding_bits[1] = current_x[2] ^ current_x[3]; 
+        padding_bits[0] = current_x[0] ^ current_x[1]; 
     end
 
-    assign prng_out = {padding_bits, current_x[59:0]};
+    assign prng_out = {padding_bits, current_x[60:0]};
 
 endmodule
