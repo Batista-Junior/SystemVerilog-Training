@@ -36,7 +36,7 @@ module genius_fsm (
   logic [31:0] lfsr_reg;
   logic        load_seed;
   logic        lfsr_en;
-  logic [31:0] feedback;
+  logic        feedback;
 
   assign level_ = (level+1) * 4'b1000;  // os levels possíveis são 8, 16 e 32
 
@@ -109,26 +109,32 @@ module genius_fsm (
 
       case(current_state)
       S0: begin 
-        saved_seed <= free_running_counter;
+        //saved_seed <= free_running_counter;
+        saved_seed    <= 32'd1;
         round_counter <= 6'b000001;
         score      <= '0;
         verif_flag <= 1'b0; 
+      end
+
+      S2: begin 
+        step_counter <= 6'b0;
       end
 
       S5: begin
         step_counter <= step_counter + 1;
       end 
       S6: begin 
-        step_counter <= 6'b0;
+        //step_counter <= 6'b0;
         verif_flag <= !verif_flag;
       end
 
-      S8: begin
-        score <= score + 1;
-      end
+      //S8: begin
+      //  score <= score + 1;
+      //end
 
       S10: begin 
         round_counter <= round_counter + 1;
+        score <= score + 1;
       end
 
       endcase
@@ -205,10 +211,15 @@ module genius_fsm (
     end
 
     S8: begin 
-      if(buttom == lfsr_decoded)
+      if(buttom == lfsr_decoded) begin
+        // Debug: Acerto
+        //$display("[HW-DEBUG] Acertou! Botao: %b, Esperado: %b", buttom, lfsr_decoded);
         next_state = S5;
-      else
+      end else begin
+        // Debug: Erro (AQUI ESTÁ A RESPOSTA)
+        $display("[HW-DEBUG] ERRO FATAL em S8! Botao lido: %b | Esperado: %b | Tempo: %t", buttom, lfsr_decoded, $time);
         next_state = S9;
+      end
     end
 
     S9: begin 

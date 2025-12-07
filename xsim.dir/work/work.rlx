@@ -1,14 +1,9 @@
 0.7
 2020.2
-May 21 2025
-22:59:56
-/home/junior/lista_systemverilog/verif-env-template/rtl/genius_fsm.sv,1764866535,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/genius_fsm_tb.sv,,genius_fsm,,uvm,,,,,,
-/home/junior/lista_systemverilog/verif-env-template/rtl/memory.sv,1763949441,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/mem_test.sv,,memory,,uvm,,,,,,
-/home/junior/lista_systemverilog/verif-env-template/rtl/memory_interface.sv,1763950999,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/rtl/memory.sv,,mem_interface,,uvm,,,,,,
-/home/junior/lista_systemverilog/verif-env-template/rtl/q_analog_prng_v2.sv,1764759399,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/q_analog_prng_tb_v2.sv,,q_analog_prng,,uvm,,,,,,
-/home/junior/lista_systemverilog/verif-env-template/tb/genius_fsm_tb.sv,1764866825,systemVerilog,,,,genius_fsm_tb,,uvm,,,,,,
-/home/junior/lista_systemverilog/verif-env-template/tb/mem_test.sv,1763979374,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/tb/top.sv,,mem_test,,uvm,,,,,,
-/home/junior/lista_systemverilog/verif-env-template/tb/q_analog_prng_tb.sv,1764293016,systemVerilog,,,,q_analog_prng_tb,,uvm,,,,,,
-/home/junior/lista_systemverilog/verif-env-template/tb/q_analog_prng_tb_v2.sv,1764721873,systemVerilog,,,,q_analog_prng_tb_v2,,uvm,,,,,,
-/home/junior/lista_systemverilog/verif-env-template/tb/top.sv,1763951207,systemVerilog,,,,top,,uvm,,,,,,
-/tools/Xilinx/2025.1/data/system_verilog/uvm_1.2/uvm_macros.svh,1741208555,systemVerilog,,/home/junior/lista_systemverilog/verif-env-template/rtl/genius_fsm.sv,,,,uvm,,,,,,
+Nov 14 2025
+12:36:23
+/home/jose/Área de trabalho/Genius/SystemVerilog-Training/rtl/genius_fsm.sv,1765134950,systemVerilog,,/home/jose/Área de trabalho/Genius/SystemVerilog-Training/tb/genius_fsm_tb.sv,,genius_fsm,,uvm,,,,,,
+/home/jose/Área de trabalho/Genius/SystemVerilog-Training/rtl/lfsr.sv,1765129038,systemVerilog,,/home/jose/Área de trabalho/Genius/SystemVerilog-Training/tb/lfsr_tb.sv,,lfsr_core,,uvm,,,,,,
+/home/jose/Área de trabalho/Genius/SystemVerilog-Training/tb/genius_fsm_tb.sv,1765072905,systemVerilog,,,,genius_fsm_tb,,uvm,,,,,,
+/home/jose/Área de trabalho/Genius/SystemVerilog-Training/tb/lfsr_tb.sv,1765129069,systemVerilog,,,,lfsr_tb,,uvm,,,,,,
+/opt/Xilinx/2025.2/data/system_verilog/uvm_1.2/uvm_macros.svh,1756381832,systemVerilog,,/home/jose/Área de trabalho/Genius/SystemVerilog-Training/rtl/genius_fsm.sv,,,,uvm,,,,,,
